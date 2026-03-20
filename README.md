@@ -42,7 +42,7 @@ This topic will focus on helping to access the relevant assets of each part of t
 ### 3. Testes de API com Postman 
 1. Import the collection in [postman_collection.json file](3_api_tests\postman_collection.json) via Postman;
 2. Open the [documentation.md file](3_api_tests\documentation.md) and compare with the collection previously imported (Step 1.).
-### 4. Tipos de Testes e Documentação (WIP)
+### 4. Tipos de Testes e Documentação
 * Just open the [qa_testing_approach_bugbank.md file](4_test_types_and_docs\qa_testing_approach_bugbank.md).
 ### 5. Consultas SQL Básicas
 * Just open the [query0_all_queries.sql file](5_sql_queries\query0_all_queries.sql).

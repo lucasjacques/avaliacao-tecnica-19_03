@@ -1,0 +1,396 @@
+{
+  "info": {
+    "_postman_id": "d23fd3fa-0ae2-460a-91ce-c4ef0f211227",
+    "name": "QA Technical Test - API Tests",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53358028",
+    "_collection_link": "https://go.postman.co/collection/53358028-d23fd3fa-0ae2-460a-91ce-c4ef0f211227?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "BrasilAPI - GET",
+      "item": [
+        {
+          "name": "GET - Retrieve Address by CEP - Success",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response should have Content-Type header\", function () {\r",
+                  "    pm.expect(pm.response.headers.has(\"Content-Type\")).to.be.true;\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Content-Type should be application/json\", function () {\r",
+                  "    const contentType = pm.response.headers.get(\"Content-Type\");\r",
+                  "    pm.expect(contentType).to.include(\"application/json\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response has required fields\", function () {\r",
+                  "    const jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData).to.have.property(\"cep\");\r",
+                  "    pm.expect(jsonData).to.have.property(\"city\");\r",
+                  "    pm.expect(jsonData).to.have.property(\"state\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"CEP is valid\", function () {\r",
+                  "    const jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData.cep).to.eql(\"88010400\");\r",
+                  "}); "
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://brasilapi.com.br/api/cep/v1/88010400",
+              "protocol": "https",
+              "host": [
+                "brasilapi",
+                "com",
+                "br"
+              ],
+              "path": [
+                "api",
+                "cep",
+                "v1",
+                "88010400"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Retrieve Address by CEP - Failed",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {\r",
+                  "    pm.response.to.have.status(400);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response should have Content-Type header\", function () {\r",
+                  "    pm.expect(pm.response.headers.has(\"Content-Type\")).to.be.true;\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Content-Type should be application/json\", function () {\r",
+                  "    const contentType = pm.response.headers.get(\"Content-Type\");\r",
+                  "    pm.expect(contentType).to.include(\"application/json\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response has required fields\", function () {\r",
+                  "    const jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData).to.have.property(\"message\");\r",
+                  "    pm.expect(jsonData).to.have.property(\"type\");\r",
+                  "    pm.expect(jsonData).to.have.property(\"name\");\r",
+                  "    pm.expect(jsonData).to.have.property(\"errors\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"CEP is invalid\", function () {\r",
+                  "    const jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData.type).to.eql(\"validation_error\");\r",
+                  "}); "
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://brasilapi.com.br/api/cep/v1/880104000",
+              "protocol": "https",
+              "host": [
+                "brasilapi",
+                "com",
+                "br"
+              ],
+              "path": [
+                "api",
+                "cep",
+                "v1",
+                "880104000"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "JSONPlaceholder - CRUD",
+      "item": [
+        {
+          "name": "POST - Create a Post - Success",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {\r",
+                  "    pm.response.to.have.status(201);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Location header should contain resource path\", function () {\r",
+                  "    const location = pm.response.headers.get(\"Location\");\r",
+                  "    pm.expect(location).to.include(\"/posts\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response contains created data\", function () {\r",
+                  "    const jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData.id).to.eql(101);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts?title=QA Test Florianópolis - Centro&body=Testing POST request&userId=1",
+              "protocol": "https",
+              "host": [
+                "jsonplaceholder",
+                "typicode",
+                "com"
+              ],
+              "path": [
+                "posts"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "QA Test Florianópolis - Centro"
+                },
+                {
+                  "key": "body",
+                  "value": "Testing POST request"
+                },
+                {
+                  "key": "userId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Create a Post with Minimal Params - Success",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {\r",
+                  "    pm.response.to.have.status(201);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Location header should contain resource path\", function () {\r",
+                  "    const location = pm.response.headers.get(\"Location\");\r",
+                  "    pm.expect(location).to.include(\"/posts\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response contains created data\", function () {\r",
+                  "    const jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData.id).to.eql(101);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts",
+              "protocol": "https",
+              "host": [
+                "jsonplaceholder",
+                "typicode",
+                "com"
+              ],
+              "path": [
+                "posts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Update a Post - Success",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response should have Content-Type header\", function () {\r",
+                  "    pm.expect(pm.response.headers.has(\"Content-Type\")).to.be.true;\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Content-Type should be application/json\", function () {\r",
+                  "    const contentType = pm.response.headers.get(\"Content-Type\");\r",
+                  "    pm.expect(contentType).to.include(\"application/json\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response contains updated data\", function () {\r",
+                  "    const jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData.id).to.eql(100);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/{{postId}}?title=QA Test Florianópolis - Itacorubi",
+              "protocol": "https",
+              "host": [
+                "jsonplaceholder",
+                "typicode",
+                "com"
+              ],
+              "path": [
+                "posts",
+                "{{postId}}"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "QA Test Florianópolis - Itacorubi"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Update a Post with Invalid Id - Failed",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 500\", function () {\r",
+                  "    pm.response.to.have.status(500);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response should have Content-Type header\", function () {\r",
+                  "    pm.expect(pm.response.headers.has(\"Content-Type\")).to.be.true;\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Content-Type should be text/html\", function () {\r",
+                  "    const contentType = pm.response.headers.get(\"Content-Type\");\r",
+                  "    pm.expect(contentType).to.include(\"text/html\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Error response should not be empty\", function () {\r",
+                  "    pm.expect(pm.response.text().length).to.be.above(0);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response should indicate server error\", function () {\r",
+                  "    const responseText = pm.response.text();\r",
+                  "    pm.expect(responseText).to.match(/error|exception|undefined/i);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/{{postIdFailed}}?title=QA Test Florianópolis - Itacorubi",
+              "protocol": "https",
+              "host": [
+                "jsonplaceholder",
+                "typicode",
+                "com"
+              ],
+              "path": [
+                "posts",
+                "{{postIdFailed}}"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "QA Test Florianópolis - Itacorubi"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "postId",
+      "value": ""
+    },
+    {
+      "key": "postIdFailed",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}

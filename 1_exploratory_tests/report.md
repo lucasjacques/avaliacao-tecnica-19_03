@@ -13,7 +13,7 @@
 
 2. Clicar na área do "pin" do componente de Switch não realiza a ação esperada. A sugestão seria utilizar também essa área para realizar a ação
     * Prioridade: Minor
-    * Evidência do Problema (vídeo)
+    * Evidência do Problema (vídeo - Caso não apareça o vídeo abaixo, favor acessar [esse link](..\assets\criacao_de_conta\bugs\bug2\evidencia_do_problema.mp4))
         <video controls>
         <source src="..\assets\criacao_de_conta\bugs\bug2\evidencia_do_problema.mp4" type="video/mp4">
         Seu browser não suporta a tag de video
@@ -31,7 +31,7 @@
 
 5. Após criar a conta, o usuário não é redirecionado para a home, quando deveria conforme citado na Tela de Requisitos.
     * Prioridade: Alta (não cumpre requisitos)
-    * Evidência do Problema (vídeo):
+    * Evidência do Problema (vídeo - Caso não apareça o vídeo abaixo, favor acessar [esse link](..\assets\criacao_de_conta\bugs\bug5\evidencia_do_problema.mp4)):
         <video controls>
         <source src="..\assets\criacao_de_conta\bugs\bug5\evidencia_do_problema.mp4" type="video/mp4">
         Seu browser não suporta a tag de video
@@ -41,7 +41,7 @@
 
 6. É possível criar múltiplas contas com o mesmo email (e até a mesma senha!). Solução sugerida: apresentar uma tela de erro caso o usuário tente cadastrar com um email ja cadastrado no sistema
     * Prioridade: Crítica (compromete a Estabilidade, Confiabilidade e Segurança  da aplicação)
-    * Evidência do Problema (vídeo):
+    * Evidência do Problema (vídeo - Caso não apareça o vídeo abaixo, favor acessar [esse link](..\assets\criacao_de_conta\bugs\bug6\evidencia_do_problema.mp4))):
         <video controls>
         <source src="..\assets\criacao_de_conta\bugs\bug6\evidencia_do_problema.mp4" type="video/mp4">
         Seu browser não suporta a tag de video
@@ -83,7 +83,7 @@
     <img src="..\assets\transferencia_entre_contas\bugs\bug2_1\evidencia_do_problema.png" alt="Transferência entre contas - Bug 2: Evidência do Problema">
 
 2.2 Ainda ao tentar realizar uma transferencia para a mesma conta de origem, ao clicar no botão "Fechar" do Modal / Popup, o usuário é redirecionado para a "Tela de Extrato"
-* Evidência do Problema (vídeo):
+* Evidência do Problema (vídeo - Caso não apareça o vídeo abaixo, favor acessar [esse link](..\assets\transferencia_entre_contas\bugs\bug2_2\evidencia_do_problema.mp4)):
         <video controls>
         <source src="..\assets\transferencia_entre_contas\bugs\bug2_2\evidencia_do_problema.mp4" type="video/mp4">
         Seu browser não suporta a tag de video

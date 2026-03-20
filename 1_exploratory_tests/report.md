@@ -40,7 +40,7 @@
         <img src="assets\criacao_de_conta\bugs\bug5\referencia_requisitos.png" alt="Criação de Conta - Bug 5: Referência">
 
 6. É possível criar múltiplas contas com o mesmo email (e até a mesma senha!). Solução sugerida: apresentar uma tela de erro caso o usuário tente cadastrar com um email ja cadastrado no sistema
-    * Prioridade: Crítica (compromete a Integridade, Confidencialidade e Autenticidade da aplicação)
+    * Prioridade: Crítica (compromete a Estabilidade, Confiabilidade e Segurança  da aplicação)
     * Evidência do Problema (vídeo):
         <video controls>
         <source src="assets\criacao_de_conta\bugs\bug6\evidencia_do_problema.mp4" type="video/mp4">

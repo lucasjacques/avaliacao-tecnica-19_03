@@ -63,7 +63,8 @@
 ### Bugs
 1. Ao não preencher o campo "Valor da Transferência" a seguinte mensagem de erro é apresentado na validação desse campo: "transferValue must be a `number` type, but the final value was: `NaN` (cast from the value `""`)." o que aparenta ser uma falta de tratativa no código, estourando um erro de uma lib.
     * Evidência do Problema:
-    <img src="assets\transferencia_entre_contas\bugs\bug1\evidencia_do_problema.png" alt="Transferência entre contas - Bug 1: Evidência do Problema">
+    <img src="assets\transferencia_entre_contas\bugs\bug1\evidencia_do_problema.png" alt="Transferência entre contas - Bug 1: Evidência do Problema">~
+    
     * Possível Solução:
         * Após fazer uma pesquisa breve, aparentemente esse erro é comum ao utilizar a lib Yup. Encontrei uma solução no StackOverflow que pode resolver o problema, resumidamente seria utilizar o método `.typeError()`. Fonte:  https://stackoverflow.com/questions/58770630/yup-when-nan-cast-from-the-value-nan
         * EDIT: Baixei o repositório da bugbank-ui e encontrei a possível linha do código que apresenta o problema:

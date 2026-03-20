@@ -22,8 +22,9 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-* Markdown Reader (VS Code recommended)
-  * I strongly recommend using VS Code with the "Preview" feature ("ctrl+shift+v" shortcut) because other applications may not load the videos properly
+* Markdown Reader ([VS Code](https://code.visualstudio.com/download) recommended)
+  * I strongly recommend using VS Code with the "Preview" feature ("ctrl+shift+v" shortcut) because other applications (such as Web Browser) may not load the videos properly
+* [Postman](https://www.postman.com/downloads/)
 
 ### Installation
 
@@ -38,7 +39,8 @@ To get a local copy up and running follow these simple steps.
 This topic will focus on helping to access the relevant assets of each part of the Assessment
 ### 1. Testes Funcionais/Exploratórios (BugBank)
 * Just open the [report.md file](1_exploratory_tests\report.md).
-### 2. Automação com Cypress (WIP)
+### 2. Automação com Cypress
+* Read the [e2e tests README](2_e2e_tests\README.md).
 ### 3. Testes de API com Postman 
 1. Import the collection in [postman_collection.json file](3_api_tests\postman_collection.json) via Postman;
 2. Open the [documentation.md file](3_api_tests\documentation.md) and compare with the collection previously imported (Step 1.).

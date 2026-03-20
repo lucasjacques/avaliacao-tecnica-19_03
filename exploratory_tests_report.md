@@ -73,7 +73,7 @@
     * Possível Solução:
         * Após fazer uma pesquisa breve, aparentemente esse erro é comum ao utilizar a lib Yup. Encontrei uma solução no StackOverflow que pode resolver o problema, resumidamente seria utilizar o método `.typeError()`. Fonte:  https://stackoverflow.com/questions/58770630/yup-when-nan-cast-from-the-value-nan
         * EDIT: Baixei o repositório da bugbank-ui e encontrei a possível linha do código que apresenta o problema:
-        <img src="assets\transferencia_entre_contas\bugs\bug1\possivel_causa_codigo.png" alt="Transferência entre contas - Bug 1: Possível Causa - Código">
+        * <img src="assets\transferencia_entre_contas\bugs\bug1\possivel_causa_codigo.png" alt="Transferência entre contas - Bug 1: Possível Causa - Código">
             * Explicando: o if da linha 78 do arquivo "src\components\FormTransfer\index.tsx" só verifica se `transferValue < 0` ou `transferValue === 0`, talvez adicionar mais um ou `transferValue === ""` já resolva o problema, ou parte dele. Então, essa linha ficaria assim: 
             *`     if (transferValue < 0 || transferValue === 0 || transferValue === "") {`
             * Não cheguei a rodar o projeto, então pode ser que na tela inicial já apresente essa validação, o que não é muito legal, mas daí deixo com os mestres do time de desenvolvimento haha

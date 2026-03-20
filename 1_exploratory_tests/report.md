@@ -48,7 +48,6 @@
         </video>
 
 ## Login
-### Bugs
 ### Melhorias
 1. Padronizar a interface de Acessar/Registrar
     * Dificuldade de Implementação: baixa (somente frontend)

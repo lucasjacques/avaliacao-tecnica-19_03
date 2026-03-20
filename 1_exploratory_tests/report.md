@@ -5,7 +5,7 @@
     * Dificuldade de Implementação: Baixa (somente frontend)
     * Prioridade: Média para Alta (inconsistência no sistema que pode gerar confusão e o ROI da mesma é alto por ser simples)
     * Evidência do Problema
-        <img src="...\assets\criacao_de_conta\bugs\bug1\evidencia_do_problema.png" alt="Criação de Conta - Bug 1: Evidência do Problema">
+        <img src="..\assets\criacao_de_conta\bugs\bug1\evidencia_do_problema.png" alt="Criação de Conta - Bug 1: Evidência do Problema">
     * Referência (Tela de Requisitos)
         <img src="..\assets\criacao_de_conta\bugs\bug1\referencia_requisitos.png" alt="Criação de Conta - Bug 1: Referência">
     * Exemplo de Sugestão de Correção (feito localmente)

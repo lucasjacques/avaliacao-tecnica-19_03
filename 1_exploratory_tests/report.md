@@ -52,7 +52,7 @@
 1. Padronizar a interface de Acessar/Registrar
     * Dificuldade de Implementação: baixa (somente frontend)
     * Prioridade: média para baixa
-    * Foi observado que os botões de "Acessar" e "Registrar" estão em posições trocadas quando comparados com Big Techs, como Google e Spotify (referencias abaixo). A sugestão de correção seria trocar os dois botões de lugar, ficando o "Registrar" na esquerda e o "Acessar" a direita.
+    * Foi observado que os botões de "Acessar" e "Registrar" estão em posições trocadas quando comparados com Big Techs, como Google e Spotify (referencias abaixo). A sugestão de correção seria trocar os dois botões de lugar, ficando o "Registrar" à esquerda e o "Acessar" à direita.
     * Por que seguir as Big Techs?
         * Em um dos artigos da renomada consultoria e pesquisa especializada em UX Nielsen Norman Group, ela explica em "4. Consistência e Padrões - Usuários não deveriam ter que ponderar se diferentes palavras, situações ou ações significam a mesma coisa. Seguir convenções de plataformas e da indústia é recomendado"
         Fonte: https://www.nngroup.com/articles/ten-usability-heuristics/

@@ -1,0 +1,23 @@
+{
+  "name": "avaliacao-tecnica-19_03",
+  "version": "1.0.0",
+  "description": "<!-- PROJECT LOGO -->\r <br />\r <p align=\"center\">\r   <a href=\"https://github.com/lucasjacques/avaliacao-tecnica-19_03/\">\r   </a>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasjacques/avaliacao-tecnica-19_03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasjacques/avaliacao-tecnica-19_03/issues"
+  },
+  "homepage": "https://github.com/lucasjacques/avaliacao-tecnica-19_03#readme",
+  "devDependencies": {
+    "cypress": "^15.12.0"
+  }
+}

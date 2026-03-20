@@ -6,7 +6,7 @@
 
   <h3 align="center"></h3>
 
-# Lucas Jacques' Technical Assessment started @19/03
+# Lucas Jacques' Technical Assessment (started @19/03)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project

@@ -31,7 +31,7 @@ SET saldo = 1500
 WHERE name = "Clara Souza";
 
 -- Opcional: verificar resultado antes de confirmar
-SELECT * FROM usuarios WHERE id = 1;
+SELECT * FROM usuarios WHERE name = "Clara Souza";
 
 COMMIT;
 

@@ -79,11 +79,11 @@
             * Não cheguei a rodar o projeto, então pode ser que na tela inicial já apresente essa validação, o que não é muito legal, mas daí deixo com os mestres do time de desenvolvimento haha
 
 2.1 Ao tentar realizar uma transferencia para a mesma conta de origem, a tela de erro tem um erro ortográfico de concordância "Não pode transferir **pra mesmo conta**". Sugestão de correção: "Não pode transferir pra mesma conta" 
-    * Evidência do Problema:
-        <img src="assets\transferencia_entre_contas\bugs\bug2_1\evidencia_do_problema.png" alt="Transferência entre contas - Bug 2: Evidência do Problema">
+* Evidência do Problema:
+    <img src="assets\transferencia_entre_contas\bugs\bug2_1\evidencia_do_problema.png" alt="Transferência entre contas - Bug 2: Evidência do Problema">
 
-2.2 Ainda ao tentar realizar uma transferencia para a mesma conta de origem, ao clicar no botão "Fechar" do Modal / Popup, o usuário é redirecionado para
-    * Evidência do Problema:
+2.2 Ainda ao tentar realizar uma transferencia para a mesma conta de origem, ao clicar no botão "Fechar" do Modal / Popup, o usuário é redirecionado para a "Tela de Extrato"
+* Evidência do Problema:
         <video controls>
         <source src="assets\transferencia_entre_contas\bugs\bug2_2\evidencia_do_problema.mp4" type="video/mp4">
         Seu browser não suporta a tag de video
